@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: "terraform"
+    directories:
+      - "/terraform/examples/multi-cluster"
+      - "/terraform/examples/single-cluster"
+      - "/terraform/modules/akeyless-k8s-auth"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
